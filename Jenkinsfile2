@@ -1,14 +1,19 @@
 pipeline {
   agent any
+  environment { 
+  USER = 'admin'
+  PASSWORD = 'password123'
+  }
   stages {
     stage("Build"){
       steps{
         print 'Hello, World'
-        }
+               }
      }
      stage("Deploy"){
        steps{
          sh 'pwd'
+         sh 'printenv'
          }
       }   
    }
