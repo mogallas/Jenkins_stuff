@@ -1,0 +1,15 @@
+pieline {
+  agent any
+  stages {
+    stage("Build"){
+      steps{
+        print 'Hello, World'
+        }
+     }
+     stage("Deploy"){
+       steps{
+         sh 'pwd'
+         }
+      }   
+   }
+}
